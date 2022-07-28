@@ -1,0 +1,90 @@
+<h1 style="color:black"><u>STUDENT REGISTRATION</u></h1>
+<hr>
+<div class="container">
+    <form class="row"  [formGroup]="form" (ngSubmit)="saveStudent()"> 
+        <div class="col-md-10">
+            <h3>BASIC DETAILS</h3><br>
+            <div class="col-md-4" >
+                <label for="inputState" class="form-label">STATE OF DOMICILE</label>
+                <select formControlName="stateofDomicile" class="form-select" id="state" >
+                  <option selected>Select state</option>
+                  <option>Andhra Pradesh </option>
+                  <option>Kerala </option>
+                  <option>Maharashtra</option>
+                  <option>West Bengal</option>
+                </select></div>
+               <label for="inputDistrict" class="form-label">DISTRICT</label>
+               <select formControlName="dist" id="inputDistrict" class="form-select" id="district" > 
+                 <option selected>Select district </option>
+                 <option>Akola </option>
+                 <option>Amravati</option>
+                 <option>Buldhana</option>
+               </select>
+           </div><br>
+           <div class="row">
+           <div class="col-md-4">
+               <label for="inputName" class="form-label">Name (AS IN MARKS SHEETS) :</label>
+               <input formControlName="name" type="text"  class="form-control" id="name" placeholder="" >
+           </div ><br>
+          
+       </div>
+           <br>
+           <div class="col-md-4">
+               <label for="inputDOB" class="form-label"> DOB :</label> 
+               <input formControlName="dob" type="date" class="form-control" id="dob" placeholder=""  >
+           </div>
+           <div class="col-md-4">
+               <label for="inputGender" class="form-label">GENDER :</label>
+               <select formControlName="gender" type="inoutGender" class="form-select" id="institutecode" placeholder="" >
+               <option selected>Select Gender</option>
+               <option>MALE</option>
+               <option>FEMALE</option>
+               <option>OTHERS</option>
+           </select>
+           </div>
+           <div class="col-md-4">
+               <label for="inputMobileNumber" class="form-label">MOBILE NUMBER:</label>
+               <input formControlName="mobileNumber" type="number" class="form-control" id="mobilenumber" placeholder=""  >
+           </div>
+           <div  class="row">
+            <div class="col-md-4">
+                <label for="inputEmail" class="form-label">EMAIL :</label>
+                <input formControlName="email" type="email" class="form-control" id="email" placeholder="" >
+            </div>
+           <div class="col-md-6">
+               <label for="inputInstituteCode" class="form-label">INSTITUTE CODE :</label>
+               <input formControlName="institutionCode" type="text" class="form-control" id="institutecode" placeholder=""  >
+           </div>
+           <div class="col-md-12">
+               <label for="inputAdharNumber" class="form-label">AADHAR NUMBER :</label>
+               <input formControlName="aadhar" type="number" class="form-control" id="aadhar" placeholder=""  >
+           </div>
+           
+           <div class="col-md-8">
+               <label for="inputBankIFSCCode" class="form-label">BANK IFSC CODE :</label>
+               <input formControlName="ifsc" type="text" class="form-control" id="bankifsccode" placeholder="" >
+           </div>
+           <div class="col-md-8">
+               <label for="inputBankAccountNumber" class="form-label">BANK ACCOUNT NUMBER :</label>
+               <input formControlName="accountno" type="number" id="bankaccountnumber" class="form-control" placeholder="" >
+             </div>
+           <div class="col-md-8">
+            <label for="inputBankName" class="form-label">BANK NAME :</label>
+            <input formControlName="bankname" type="text" class="form-control" id="bankname" placeholder="" >
+             </div>
+             <div class="col-md-8">
+                <label for="password" class="form-label">SET PASSWORD</label>
+                <input formControlName="password" type="password" class="form-control" id="password" placeholder="" >
+            </div>
+              <div class="form-check" class="col-md-10">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked required>
+                <label class="form-check-label" for="flexCheckChecked" >
+                  ALL THE ABOVE INFORMATION FURNISHED BY ME IS TRUE TO THE BEST OF MY KNOWLEDGE.
+                </label>
+              </div>
+             <div > <button  class="btn btn-success" type="register" [disabled]="form.invalid" >REGISTER</button>
+            <button class="btn btn-danger" type="reset" value="Reset">RESET</button>
+            </div>
+        </div>
+    </form>
+</div> 

@@ -1,0 +1,16 @@
+h1{
+    color: blue;
+    margin-left: 32%;
+}
+.btn{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+
+.container{
+    background-image: url('http://housedemocrats.wa.gov/tmp/2012/12/DomeWebsiteBackground2.jpg');
+    background-repeat: no-repeat;
+    background-size: 200%;
+}

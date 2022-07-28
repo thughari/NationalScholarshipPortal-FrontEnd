@@ -1,0 +1,10 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.accordion-item{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-8_niBgNECa94J8mAaAhZuOqKXTLl6UDNQ&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    width: 350%;
+    height: 100%;
+}
