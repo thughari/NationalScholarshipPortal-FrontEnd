@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { student } from '../student';
 @Component({
   selector: 'app-studentlogin',
@@ -20,9 +20,9 @@ export class StudentloginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  form=new FormGroup({
-    'email':new FormControl('',Validators.compose([Validators.email, Validators.required])),
-    'password':new FormControl('',Validators.required),
+  form=new UntypedFormGroup({
+    'email':new UntypedFormControl('',Validators.compose([Validators.email, Validators.required])),
+    'password':new UntypedFormControl('',Validators.required),
   })
   student:student=new student();
   checkLogin() {

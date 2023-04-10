@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { ministry } from '../ministry';
@@ -20,9 +20,9 @@ export class MinistryComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  form=new FormGroup({
-    'ministryId':new FormControl('',Validators.required),
-    'password':new FormControl('',Validators.required),
+  form=new UntypedFormGroup({
+    'ministryId':new UntypedFormControl('',Validators.required),
+    'password':new UntypedFormControl('',Validators.required),
   })
   ministry:ministry=new ministry();
   checkLogin() {

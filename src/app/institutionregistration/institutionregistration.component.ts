@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Institution } from '../institution';
 import { InstitutionregistrationService } from '../institutionregistration.service';
@@ -16,30 +16,30 @@ export class InstitutionregistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  form=new FormGroup({
-    'institutionCategory':new FormControl('',Validators.required),
-    'name':new FormControl('',Validators.required),
-    'inststate':new FormControl('',Validators.required),
-    'instdistrict':new FormControl('',Validators.required),
-    'institutionCode':new FormControl('',Validators.required),
-    'email':new FormControl('',Validators.required),
-    'disecode':new FormControl('',Validators.required),
-    'location':new FormControl('',Validators.required),
-    'institutionType':new FormControl('',Validators.required),
-    'affilatedUniversityState':new FormControl('',Validators.required),
-    'affilatedUniversityBoardName':new FormControl('',Validators.required),
-    'yearFromWhichAdmissionStarted':new FormControl('',Validators.required),
-    'setPassword':new FormControl('',Validators.required),
-    'confirmPassword':new FormControl('',Validators.required),
-    'addressLine1':new FormControl('',Validators.required),
-    'addressLine2':new FormControl('',Validators.required),
-    'city':new FormControl('',Validators.required),
-    'state':new FormControl('',Validators.required),
-    'district':new FormControl('',Validators.required),
-    'pincode':new FormControl('',Validators.required),
-    'principleName':new FormControl('',Validators.required),
-    'mobileNumber':new FormControl('',Validators.required),
-    'telephone':new FormControl('',Validators.required)
+  form=new UntypedFormGroup({
+    'institutionCategory':new UntypedFormControl('',Validators.required),
+    'name':new UntypedFormControl('',Validators.required),
+    'inststate':new UntypedFormControl('',Validators.required),
+    'instdistrict':new UntypedFormControl('',Validators.required),
+    'institutionCode':new UntypedFormControl('',Validators.required),
+    'email':new UntypedFormControl('',Validators.required),
+    'disecode':new UntypedFormControl('',Validators.required),
+    'location':new UntypedFormControl('',Validators.required),
+    'institutionType':new UntypedFormControl('',Validators.required),
+    'affilatedUniversityState':new UntypedFormControl('',Validators.required),
+    'affilatedUniversityBoardName':new UntypedFormControl('',Validators.required),
+    'yearFromWhichAdmissionStarted':new UntypedFormControl('',Validators.required),
+    'setPassword':new UntypedFormControl('',Validators.required),
+    'confirmPassword':new UntypedFormControl('',Validators.required),
+    'addressLine1':new UntypedFormControl('',Validators.required),
+    'addressLine2':new UntypedFormControl('',Validators.required),
+    'city':new UntypedFormControl('',Validators.required),
+    'state':new UntypedFormControl('',Validators.required),
+    'district':new UntypedFormControl('',Validators.required),
+    'pincode':new UntypedFormControl('',Validators.required),
+    'principleName':new UntypedFormControl('',Validators.required),
+    'mobileNumber':new UntypedFormControl('',Validators.required),
+    'telephone':new UntypedFormControl('',Validators.required)
   });
 
   Institution:Institution=new Institution();

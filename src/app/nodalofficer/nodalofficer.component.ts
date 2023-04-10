@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { nodal } from '../nodal'
 
 @Component({
@@ -23,9 +23,9 @@ export class NodalofficerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  form=new FormGroup({
-    'nodalId':new FormControl('',Validators.compose([Validators.required])),
-    'password':new FormControl('',Validators.required),
+  form=new UntypedFormGroup({
+    'nodalId':new UntypedFormControl('',Validators.compose([Validators.required])),
+    'password':new UntypedFormControl('',Validators.required),
   })
 
   nodal:nodal=new nodal();

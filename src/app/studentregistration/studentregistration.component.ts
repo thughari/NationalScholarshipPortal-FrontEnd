@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Institution } from '../institution';
 import { InstitutionregistrationService } from '../institutionregistration.service';
@@ -21,20 +21,20 @@ export class StudentregistrationComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  form=new FormGroup({
-    'stateofDomicile':new FormControl('',Validators.required),
-    'dist':new FormControl('',Validators.required),
-    'name':new FormControl('',Validators.required),
-    'dob':new FormControl('',Validators.required),
-    'gender':new FormControl('',Validators.required),
-    'mobileNumber':new FormControl('',Validators.required),
-    'email':new FormControl('',Validators.compose([Validators.email, Validators.required])),
-    'institutionCode':new FormControl('',Validators.required),
-    'aadhar':new FormControl('',Validators.required),
-    'ifsc':new FormControl('',Validators.required),
-    'accountno':new FormControl('',Validators.required),
-    'bankname':new FormControl('',Validators.required),
-    'password':new FormControl('',Validators.required),
+  form=new UntypedFormGroup({
+    'stateofDomicile':new UntypedFormControl('',Validators.required),
+    'dist':new UntypedFormControl('',Validators.required),
+    'name':new UntypedFormControl('',Validators.required),
+    'dob':new UntypedFormControl('',Validators.required),
+    'gender':new UntypedFormControl('',Validators.required),
+    'mobileNumber':new UntypedFormControl('',Validators.required),
+    'email':new UntypedFormControl('',Validators.compose([Validators.email, Validators.required])),
+    'institutionCode':new UntypedFormControl('',Validators.required),
+    'aadhar':new UntypedFormControl('',Validators.required),
+    'ifsc':new UntypedFormControl('',Validators.required),
+    'accountno':new UntypedFormControl('',Validators.required),
+    'bankname':new UntypedFormControl('',Validators.required),
+    'password':new UntypedFormControl('',Validators.required),
   });
   student:student=new student();
   saveStudent()

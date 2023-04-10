@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ministry } from '../ministry';
 import { AdminloginService } from '../adminlogin.service';
@@ -20,9 +20,9 @@ export class AdminloginComponent implements OnInit {
   loginValues:any;
   loginpass:any;
   loginValid:any;
-  form=new FormGroup({
-    'admin':new FormControl('',Validators.required),
-    'password':new FormControl('',Validators.required)
+  form=new UntypedFormGroup({
+    'admin':new UntypedFormControl('',Validators.required),
+    'password':new UntypedFormControl('',Validators.required)
   });
   login()
   {

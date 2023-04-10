@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScholarshipapplicationService } from '../scholarshipapplication.service';
 import { applicationDetails } from '../scholarshipapplicationdetails';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -17,11 +17,11 @@ export class ScholarapplicationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  form=new FormGroup({
-    'name':new FormControl('',Validators.required),
-    'aadharNo':new FormControl('',Validators.required),
-    'phoneNumber':new FormControl('',Validators.required),
-    'email':new FormControl('',Validators.compose([Validators.email, Validators.required]))
+  form=new UntypedFormGroup({
+    'name':new UntypedFormControl('',Validators.required),
+    'aadharNo':new UntypedFormControl('',Validators.required),
+    'phoneNumber':new UntypedFormControl('',Validators.required),
+    'email':new UntypedFormControl('',Validators.compose([Validators.email, Validators.required]))
   });
 
   Details:applicationDetails = new applicationDetails();
