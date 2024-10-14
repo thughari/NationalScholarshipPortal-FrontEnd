@@ -9,7 +9,8 @@ export class AdminloginService {
   response:any;
 
   constructor(private myhttp:HttpClient) { }
-  restURL:string="http://localhost:8989/ministry";
+  // restURL:string="http://localhost:8989/ministry";
+  restURL:string="https://national-scholarship-portal.onrender.com/ministry"; //url hosted on Render
   login(add:any):Observable<any>
   {
     //return this.myhttp.get();

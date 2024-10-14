@@ -9,7 +9,7 @@ export class StudentapplicationsService {
   
   restURL: string;
   constructor(private myhttp:HttpClient) {
-    this.restURL="http://localhost:8989/"
+    this.restURL="https://national-scholarship-portal.onrender.com/"
   
   }
    getapplicationList(): Observable<any> {

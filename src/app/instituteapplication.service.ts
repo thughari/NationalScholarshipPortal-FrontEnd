@@ -9,7 +9,7 @@ export class InstituteapplicationService {
   
   restURL: string;
   constructor(private myhttp:HttpClient) {
-      this.restURL="http://localhost:8989/"
+      this.restURL="https://national-scholarship-portal.onrender.com/s"
   }
   getapplicationList(): any {
     return this.myhttp.get(`${this.restURL}institutes`);

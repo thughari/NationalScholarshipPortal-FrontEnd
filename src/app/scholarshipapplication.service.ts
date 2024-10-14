@@ -8,7 +8,7 @@ import { applicationDetails } from './scholarshipapplicationdetails';
 export class ScholarshipapplicationService {
 
   constructor(private myhttp:HttpClient) { }
-  restUrl:string="http://localhost:8989";
+  restUrl:string="https://national-scholarship-portal.onrender.com";
 
   getStudent(){
     return this.myhttp.get(this.restUrl+"/student")

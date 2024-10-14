@@ -7,7 +7,7 @@ import { catchError, Observable, throwError } from 'rxjs';
 })
 export class StudenthomeService {
   constructor(private myhttp:HttpClient) { }
-  restURL:string="http://localhost:8989/"
+  restURL:string="https://national-scholarship-portal.onrender.com/"
   ShowDetails(email:String)
   {
     return this.myhttp.get(`${this.restURL}candidate/`+`${email}`);

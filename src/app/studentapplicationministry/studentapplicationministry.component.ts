@@ -13,7 +13,7 @@ export class StudentapplicationministryComponent implements OnInit {
   ShowDetails:any;
   restURL: string;
   constructor(private stu:StudentapplicationsService,private myRouter:Router) {
-    this.restURL="http://localhost:8989/"
+    this.restURL="https://national-scholarship-portal.onrender.com/"
    }
 
   ngOnInit(): void {

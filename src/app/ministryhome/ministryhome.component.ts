@@ -12,7 +12,7 @@ export class MinistryhomeComponent implements OnInit {
   restURL: string;
 
   constructor(private myhttp:HttpClient,private min:MinistryhomeService,private myRouter:Router) { 
-    this.restURL="http://localhost:8989/"
+    this.restURL="https://national-scholarship-portal.onrender.com/"
   }
 
   ministryId:any;

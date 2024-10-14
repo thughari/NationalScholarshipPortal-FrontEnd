@@ -12,26 +12,26 @@ export class AuthenticationService {
 
   saveStudent(student:Object):Observable<Object>
   {
-    return this.http.post("http://localhost:8989/registerstudent",student);
+    return this.http.post("https://national-scholarship-portal.onrender.com/registerstudent",student);
   }
 
   login(student:any):Observable<any>
   {
-    return this.http.post("http://localhost:8989/loginstudent",student);
+    return this.http.post("https://national-scholarship-portal.onrender.com/loginstudent",student);
   }
   nodallogin(nodal:any):Observable<any>
   {
-    return this.http.post("http://localhost:8989/nodallogin",nodal);
+    return this.http.post("https://national-scholarship-portal.onrender.com/nodallogin",nodal);
   }
 
   ministrylogin(ministry:any):Observable<any>
   {
-    return this.http.post("http://localhost:8989/ministry/loginministry",ministry);
+    return this.http.post("https://national-scholarship-portal.onrender.com/ministry/loginministry",ministry);
   }
 
   institutelogin(institute:any):Observable<any>
   {
-    return this.http.post("http://localhost:8989/institutionlogin",institute);
+    return this.http.post("https://national-scholarship-portal.onrender.com/institutionlogin",institute);
   }
 
   isUserLoggedIn() {
@@ -45,6 +45,6 @@ export class AuthenticationService {
   }
 
   getDealersList():Observable<any>{
-    return this.http.get("http://localhost:8989/Students");
+    return this.http.get("https://national-scholarship-portal.onrender.com/Students");
   }
 }
